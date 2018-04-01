@@ -11,8 +11,10 @@
 body {
   font-family: 'Muli', sans-serif;
   font-weight: 300;
+  font-size: 16px;
   color: var(--text);
   background-color: var(--background-white);
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }

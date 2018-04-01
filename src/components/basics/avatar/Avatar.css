@@ -1,0 +1,16 @@
+:import('../../../constants.css') {
+  white: white;
+}
+
+:root {
+  --white: white;
+}
+
+:local(.avatar) {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  border: 0.125rem solid var(--white);
+  background-position: center;
+  background-size: 8rem;
+}
