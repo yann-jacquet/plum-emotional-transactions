@@ -31,3 +31,5 @@ As I studied :
 * [CSS-modules](https://medium.com/@pioul/modular-css-with-react-61638ae9ea3e)
 
 It may have some code, best practices to improve.
+
+* Regarding the animation of the dropdown we should compute and set its max-height with real list height

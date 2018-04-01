@@ -3,6 +3,11 @@
   background-white: #f5f3f1;
   text: #1e1e24;
   white: #ffffff;
+  plum-cyan: #50d2f9;
+  plum-skyblue: #09bff6;
+  plum-purple: #7f5ac4;
+  plum-blue: #4a92cf;
+  blue-gradient: linear-gradient(to bottom right, #7f5ac4, #4a92cf);
 
   /* Text & Font */
   text-light: 300;
@@ -12,4 +17,14 @@
   /* Boundaries */
   spacing-tiny :  0.25rem;
   spacing-small: 0.5rem;
+  spacing-medium: 1rem;
+  spacing-big: 1.25rem;
+  spacing-huge: 1.50rem;
+  spacing-double: 2rem;
+
+  /* Corners */
+  button-radius: 1.25rem;
+
+  /* Transitions */
+  base-transition: 0.3s ease-in-out;
 }

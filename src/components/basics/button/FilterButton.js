@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 
 import ClickOutside from '../utils/ClickOutside'
 
+import styles from './Button.css'
+
 class FilterButton extends Component {
   constructor() {
     super()
@@ -17,9 +19,9 @@ class FilterButton extends Component {
     const { isOpen } = this.state
 
     const optionsList = (
-      <ul>
+      <ul className={styles.list}>
         {options.map(option => (
-          <li key={option.value} onClick={() => onItemClick(option.value)}>
+          <li className={styles.listItem} key={option.value} onClick={() => onItemClick(option.value)}>
             {option.label}
           </li>
         ))}
@@ -28,8 +30,14 @@ class FilterButton extends Component {
 
     return (
       <ClickOutside onClickOutside={() => this.setState({ isOpen: false })}>
-        <button type="button" onClick={() => this.setState({ isOpen: !isOpen })}>
-          {label}
+        <button
+          className={[styles.btn, styles.btnFilter, isOpen ? styles.btnFilterActive : null].join(' ')}
+          type="button"
+          onClick={() => this.setState({ isOpen: !isOpen })}
+        >
+          <span className={styles.btnLabel} >
+            {label}<i className={['fas', 'fa-angle-down', isOpen ? styles.rotate : null].join(' ')} />
+          </span>
           {isOpen && optionsList}
         </button>
       </ClickOutside>
