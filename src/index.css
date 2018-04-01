@@ -1,5 +1,18 @@
+:import('./constants.css') {
+  background-white: background-white;
+  text: text;
+}
+
+:root {
+  --background-white: background-white;
+  --text: text;
+}
+
 body {
+  font-family: 'Muli', sans-serif;
+  font-weight: 300;
+  color: var(--text);
+  background-color: var(--background-white);
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
 }

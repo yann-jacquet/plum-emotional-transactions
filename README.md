@@ -24,3 +24,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 After cloning this repo just `npm i && npm start` and you'll be set to have a look at my work !
 
 ## Improvements
+
+### New usages
+As I studied :
+* Flexbox (and [Flexboxgrid](https://github.com/kristoferjoseph/flexboxgrid))
+* [CSS-modules](https://medium.com/@pioul/modular-css-with-react-61638ae9ea3e)
+
+It may have some code, best practices to improve.
