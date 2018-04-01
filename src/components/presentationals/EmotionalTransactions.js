@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import ProfilInfo from '../basics/profilInfo/ProfilInfo'
+import FilterButton from '../basics/button/FilterButton'
 
 const EmotionalTransactions = ({ changeEmotion, list }) => (
   <div className="row center-sm">
@@ -18,6 +19,21 @@ const EmotionalTransactions = ({ changeEmotion, list }) => (
         <div className="col-sm-12">
           <div className="box">
             <ProfilInfo picLink="img/avatar.jpg" user={{ firstname: 'Earl', lastname: 'E.Bird', clientId: 58394059321 }} />
+          </div>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-sm-12">
+          <div className="box">
+            <FilterButton
+              label="Emotions"
+              onItemClick={(value) => console.log('clicked on ', value)}
+              options={[
+                { value: 'love', label: 'love' },
+                { value: 'joy', label: 'joy' },
+                { value: 'hate', label: 'hate' },
+              ]}
+            />
           </div>
         </div>
       </div>
