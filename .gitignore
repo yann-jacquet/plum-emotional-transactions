@@ -1,3 +1,8 @@
 # Untracked files:
+
+# Dev
 node_modules/
 package-lock.json
+
+# prod
+/build
