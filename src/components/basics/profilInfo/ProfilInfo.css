@@ -1,0 +1,20 @@
+:import('../../../constants.css') {
+  spacing-small: spacing-small;
+  white: white;
+}
+
+:root {
+  --spacing-small: spacing-small;
+  --white: white;
+}
+
+:local(.profilInfo) {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+:local(.information) {
+  padding-left: var(--spacing-small);
+  color: var(--white);
+}

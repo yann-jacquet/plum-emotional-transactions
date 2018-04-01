@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import Avatar from '../basics/avatar/Avatar'
+import ProfilInfo from '../basics/profilInfo/ProfilInfo'
 
 const EmotionalTransactions = ({ changeEmotion, list }) => (
   <div className="row center-sm">
@@ -17,7 +17,7 @@ const EmotionalTransactions = ({ changeEmotion, list }) => (
       <div className="row">
         <div className="col-sm-12">
           <div className="box">
-            <Avatar picLink="img/avatar.jpg" />
+            <ProfilInfo picLink="img/avatar.jpg" user={{ firstname: 'Earl', lastname: 'E.Bird', clientId: 58394059321 }} />
           </div>
         </div>
       </div>
