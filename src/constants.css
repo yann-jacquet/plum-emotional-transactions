@@ -24,6 +24,9 @@
   spacing-huge: 1.50rem;
   spacing-double: 2rem;
 
+  /* Sizing */
+  size-emoji: 2rem;
+
   /* Corners */
   button-radius: 1.25rem;
   corner-radius: 0.5rem;

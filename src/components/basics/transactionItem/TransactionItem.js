@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import emotionMatcher from '../utils/emotionMatcher'
+import EmotionSelector from '../button/EmotionSelector'
 
 import styles from './TransactionItem.css'
 
@@ -23,7 +23,7 @@ const TransactionItem = ({ transaction, className }) => (
       </div>
     </div>
     <div className={styles.transactionEmotion}>
-      {emotionMatcher(transaction.emotion)}
+      <EmotionSelector emotion={transaction.emotion} onChange={(emo) => console.log('changed for this', emo)} className={styles.emoji} />
     </div>
   </li>
 )

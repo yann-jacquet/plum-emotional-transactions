@@ -1,0 +1,72 @@
+:import('../../../constants.css') {
+  size-emoji: size-emoji;
+  hover-shadow: hover-shadow;
+  spacing-tiny: spacing-tiny;
+  spacing-small: spacing-small;
+}
+
+:root {
+  --size-emoji: size-emoji;
+  --hover-shadow: hover-shadow;
+  --spacing-tiny: spacing-tiny;
+  --spacing-small: spacing-small;
+}
+
+:local(.btnEmoji) {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  width: var(--size-emoji);
+  height: var(--size-emoji);
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+:local(.list) {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: calc((7 * var(--size-emoji)));
+  display: flex;
+  flex-flow: row nowrap;
+  align-content: space-between;
+  position: absolute;
+  top: calc(var(--spacing-small) + var(--size-emoji));
+  left: 50%;
+  transform: translate(-50%);
+}
+
+:local(.listItem) {
+  width: var(--size-emoji);
+  height: var(--size-emoji);
+  box-shadow: var(--hover-shadow);
+  border-radius: 50%;
+  opacity: 0;
+  margin-right: var(--spacing-tiny);
+  transition: transform var(--base-transtion);
+}
+
+:local(.listItem):hover {
+  transform: scale(1.4);
+}
+
+:local(.entered) {
+  animation: emojiAppear 0.3s ease-in-out forwards;
+}
+
+@keyframes emojiAppear {
+    0% {
+      opacity: 0;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(1.4);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+}

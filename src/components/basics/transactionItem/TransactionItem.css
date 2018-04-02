@@ -35,6 +35,7 @@
   font-size: 1rem;
   box-shadow: var(--rest-shadow);
   transition: var(--base-transition);
+  position: relative;
 }
 
 :local(.transaction):hover {
@@ -44,6 +45,13 @@
 :local(.amount) {
   text-align: right;
   font-weight: var(--text-bold);
+}
+
+:local(.emoji) {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(var(--spacing-big), -50%);
 }
 
 :local(.appear) {
