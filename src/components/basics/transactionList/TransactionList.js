@@ -11,7 +11,8 @@ class TransactionList extends Component {
     super()
 
     this.state = {
-      isOpen: false,
+      filter: null,
+      search: '',
     }
   }
 

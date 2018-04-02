@@ -1,8 +1,12 @@
+import constant from '../constants'
 import {
   CHANGE_EMOTION,
 } from '../actions/list'
 
-export default function cart(state = [], action) {
+// Since we don't have any API we init manually
+const initState = constant.transactions
+
+export default function list(state = initState, action) {
   switch (action.type) {
     case CHANGE_EMOTION:
       return [...state, action.itemId]
