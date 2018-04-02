@@ -1,25 +1,31 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import moment from 'moment'
 
 import EmotionSelector from '../button/EmotionSelector'
 
 import styles from './TransactionItem.css'
 
-const TransactionItem = ({ transaction, className, onEmotionChange }) => (
-  <li className={['row', styles.transaction, className].join(' ')}>
-    <div className="col-sm-3">
+const TransactionItem = ({ transaction, style, onEmotionChange }) => (
+  <li className={['row', styles.transaction].join(' ')} style={style}>
+    <div className="col-sm-2">
       <div className="box">
-        <p>{transaction.date}</p>
+        <p className="italic">{moment(transaction.created).format('MMM Do YY')}</p>
       </div>
     </div>
-    <div className="col-sm-6">
+    <div className="col-sm-3">
+      <div className="box">
+        <p>{transaction.description}</p>
+      </div>
+    </div>
+    <div className="col-sm-4">
       <div className="box">
         <p>{transaction.note}</p>
       </div>
     </div>
     <div className={['col-sm-3', styles.amount].join(' ')}>
       <div className="box">
-        <p>{transaction.price}</p>
+        <p>{Math.round(transaction.amount).toFixed(2)}&nbsp;{transaction.currency === 'GBP' ? '£' : '€'}</p>
       </div>
     </div>
     <div className={styles.transactionEmotion}>
@@ -31,11 +37,11 @@ const TransactionItem = ({ transaction, className, onEmotionChange }) => (
 TransactionItem.propTypes = {
   transaction: PropTypes.object.isRequired,
   onEmotionChange: PropTypes.func.isRequired,
-  className: PropTypes.string,
+  style: PropTypes.object,
 }
 
 TransactionItem.defaultProps = {
-  className: '',
+  style: {},
 }
 
 export default TransactionItem

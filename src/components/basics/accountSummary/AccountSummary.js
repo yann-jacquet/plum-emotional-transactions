@@ -1,10 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { emotionsList } from '../utils/emotionMatcher'
-
 import ProfilInfo from '../profilInfo/ProfilInfo'
-import FilterButton from '../button/FilterButton'
 
 import styles from './AccountSummary.css'
 
@@ -20,12 +17,6 @@ const AccountSummary = ({ user }) => (
         <span className={styles.balance}>£&nbsp;{Math.round(user.balance).toFixed(2)}</span>
       </div>
     </div>
-    <FilterButton
-      label="Emotions"
-      onItemClick={(value) => console.log('clicked on ', value)}
-      options={emotionsList.map(emo => ({ value: emo, label: emo }))}
-      className={styles.filter}
-    />
   </header>
 )
 

@@ -9,6 +9,7 @@
   spacing-tiny: spacing-tiny;
   spacing-big: spacing-big;
   base-transition: base-transition;
+  index-hover: index-hover;
 }
 
 :root {
@@ -22,6 +23,7 @@
   --spacing-tiny: spacing-tiny;
   --spacing-big: spacing-big;
   --base-transition: base-transition;
+  --index-hover: index-hover;
 }
 
 :local(.transaction) {
@@ -36,10 +38,12 @@
   box-shadow: var(--rest-shadow);
   transition: var(--base-transition);
   position: relative;
+  /* animation: itemAppear 0.3s ease-in-out forwards 0.3s; */
 }
 
 :local(.transaction):hover {
   box-shadow: var(--hover-shadow);
+  z-index: var(--index-hover);
 }
 
 :local(.amount) {
@@ -54,12 +58,9 @@
   transform: translate(var(--spacing-big), -50%);
 }
 
-:local(.appear) {
-  animation: itemAppear 0.6s ease-in-out;
-}
-
 @keyframes itemAppear {
     0% {
+      opacity: 0;
       transform: scale(1);
     }
     50% {

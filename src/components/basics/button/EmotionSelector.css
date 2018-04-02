@@ -3,6 +3,7 @@
   hover-shadow: hover-shadow;
   spacing-tiny: spacing-tiny;
   spacing-small: spacing-small;
+  index-top: index-top;
 }
 
 :root {
@@ -10,6 +11,7 @@
   --hover-shadow: hover-shadow;
   --spacing-tiny: spacing-tiny;
   --spacing-small: spacing-small;
+  --index-top: index-top;
 }
 
 :local(.btnEmoji) {
@@ -22,6 +24,7 @@
   padding: 0;
   margin: 0;
   position: relative;
+  z-index: var(--index-top);
 }
 
 :local(.list) {
@@ -36,6 +39,7 @@
   top: calc(var(--spacing-small) + var(--size-emoji));
   left: 50%;
   transform: translate(-50%);
+  z-index: var(--index-top);
 }
 
 :local(.listItem) {

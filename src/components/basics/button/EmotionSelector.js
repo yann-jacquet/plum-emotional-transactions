@@ -29,7 +29,6 @@ class EmotionSelector extends Component {
             onClick={() => onChange(emo, state)}
           >
             {emotionMatcher(emo)}
-            {console.log(state)}
           </li>
         )}
       </Transition>

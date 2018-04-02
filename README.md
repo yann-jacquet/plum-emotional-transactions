@@ -1,6 +1,6 @@
 # Plum Emotional Transactions - Tech test
 
-This repo will only be a way to evaluate my dev and UI/UX skills, in no way a ready-to-production app. I'll also be using some cool new stuff to learn to kill two birds with one stone : tech test and learn having fun !  
+This repo will only be a way to evaluate my dev and UI/UX skills. In no way it will be a ready-to-production app. I'll also be using some cool new stuff to learn so I will be killing two birds with one stone : tech test and learning !  
 I made the choice to not do TDD (Test Driven Dev) to focus a bit more on the UI/UX side of the project.
 
 ## Objectives
@@ -29,9 +29,16 @@ After cloning this repo just `npm i && npm start` and you'll be set to have a lo
 As I studied :
 * Flexbox (and [Flexboxgrid](https://github.com/kristoferjoseph/flexboxgrid))
 * [CSS-modules](https://medium.com/@pioul/modular-css-with-react-61638ae9ea3e)
+* [React Transition Group](https://github.com/reactjs/react-transition-group)
 
-It may have some code, best practices to improve.
+It may have some code and best practices to improve.
+
+### Still some work ...
 
 * Regarding the animation of the dropdown we should compute and set its max-height with real list height
 * Add backward animations on CSS class remove
 * Investigate how to write less constants declaration in each CSS files for de CSS-modules
+* Responsive on mobile is a bit broken
+* Could create an utils function to filter and search
+* Could use portals for buttons menus
+* Could add some animation on Emotions interactions and list item appearance

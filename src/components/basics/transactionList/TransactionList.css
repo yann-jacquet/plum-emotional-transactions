@@ -1,0 +1,50 @@
+:import('../../../constants.css') {
+  spacing-small: spacing-small;
+  grey: grey;
+  text-bold: text-bold;
+  index-top: index-top;
+}
+
+:root {
+  --spacing-small: spacing-small;
+  --grey: grey;
+  --text-bold: text-bold;
+  --index-top: index-top;
+}
+
+:local(.sectionList) {
+  position: relative;
+}
+
+:local(.list) {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+:local(.list) > li {
+  margin-bottom: var(--spacing-small);
+}
+
+:local(.list) > li:first-child {
+  margin-top: var(--spacing-small);
+  margin-bottom: var(--spacing-small);
+}
+
+:local(.search) {
+  text-align: left;
+}
+
+:local(.stats) {
+  text-align: right;
+  color: var(--grey);
+  font-weight: var(--text-bold);
+}
+
+:local(.filter) {
+  position: absolute;
+  top: -3.3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: var(--index-top);
+}

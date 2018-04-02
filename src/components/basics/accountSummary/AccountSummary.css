@@ -22,7 +22,6 @@
   height: 15rem;
   margin-bottom: var(--spacing-double);
   padding: var(--spacing-double);
-  position: relative;
 }
 
 :local(.balance) {
@@ -30,11 +29,4 @@
   color: var(--white);
   font-weight: var(--text-bold);
   font-size: 3rem;
-}
-
-:local(.filter) {
-  position: absolute;
-  bottom: -1rem;
-  left: 50%;
-  transform: translateX(-50%);
 }
