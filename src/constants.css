@@ -3,6 +3,8 @@
   background-white: #f5f3f1;
   text: #1e1e24;
   white: #ffffff;
+  light-grey: #e0e0e0;
+  grey: #bdbdbd;
   plum-cyan: #50d2f9;
   plum-skyblue: #09bff6;
   plum-purple: #7f5ac4;
@@ -24,6 +26,7 @@
 
   /* Corners */
   button-radius: 1.25rem;
+  corner-radius: 0.5rem;
 
   /* Transitions */
   base-transition: 0.3s ease-in-out;

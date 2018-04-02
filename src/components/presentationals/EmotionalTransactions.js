@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 
 import ProfilInfo from '../basics/profilInfo/ProfilInfo'
 import FilterButton from '../basics/button/FilterButton'
+import SearchButton from '../basics/button/SearchButton'
 
 const EmotionalTransactions = ({ changeEmotion, list }) => (
   <div className="row center-sm">
@@ -34,6 +35,7 @@ const EmotionalTransactions = ({ changeEmotion, list }) => (
                 { value: 'hate', label: 'hate' },
               ]}
             />
+            <SearchButton onChange={(value) => console.log('searching for', value)} />
           </div>
         </div>
       </div>

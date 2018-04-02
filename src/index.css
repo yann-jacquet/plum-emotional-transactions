@@ -1,17 +1,25 @@
 :import('./constants.css') {
   background-white: background-white;
+  light-grey: light-grey;
+  grey: grey;
+  plum-blue: plum-blue;
   text: text;
   text-light: text-light;
   text-bold: text-bold;
   spacing-tiny: spacing-tiny;
+  base-transition: base-transition;
 }
 
 :root {
   --background-white: background-white;
+  --light-grey: light-grey;
+  --grey: grey;
+  --plum-blue: plum-blue;
   --text: text;
   --text-light: text-light;
   --text-bold: text-bold;
   --spacing-tiny: spacing-tiny;
+  --base-transition: base-transition;
 }
 
 /* General Styling */
@@ -35,6 +43,39 @@ h1 {
 
 p {
   margin: 0;
+}
+
+.pe-search-input {
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+  border-bottom: 0.125rem solid var(--light-grey);
+  transition: border-bottom var(--base-transition);
+  position: relative;
+}
+
+.pe-search-input::before {
+  content: "test";
+  position: absolute;
+  font-family: Font Awesome\ 5 Free;
+  left: 2rem;
+  bottom: 0;
+}
+
+.pe-search-input:focus {
+  border: none;
+  outline: none;
+  color: var(--text);
+  border-bottom: 0.125rem solid var(--plum-blue);
+}
+
+.pe-search-input::placeholder {
+  color: var(--grey);
+  transition: color var(--base-transition);
+}
+
+.pe-search-input:focus::placeholder {
+  color: var(--text);
 }
 
 /* Utils Class */
