@@ -33,3 +33,5 @@ As I studied :
 It may have some code, best practices to improve.
 
 * Regarding the animation of the dropdown we should compute and set its max-height with real list height
+* Add backward animations on CSS class remove
+* Investigate how to write less constants declaration in each CSS files for de CSS-modules

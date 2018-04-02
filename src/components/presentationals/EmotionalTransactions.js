@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import ProfilInfo from '../basics/profilInfo/ProfilInfo'
 import FilterButton from '../basics/button/FilterButton'
 import SearchButton from '../basics/button/SearchButton'
+import TransactionItem from '../basics/transactionItem/TransactionItem'
 
 const EmotionalTransactions = ({ changeEmotion, list }) => (
   <div className="row center-sm">
@@ -36,6 +37,16 @@ const EmotionalTransactions = ({ changeEmotion, list }) => (
               ]}
             />
             <SearchButton onChange={(value) => console.log('searching for', value)} />
+          </div>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-sm-12">
+          <div className="box">
+            <TransactionItem transaction={{
+              date: '22/02/2018', note: 'This a real note I swear', price: '£99,00', emotion: 'joy',
+            }}
+            />
           </div>
         </div>
       </div>
