@@ -40,5 +40,6 @@ It may have some code and best practices to improve.
 * Investigate how to write less constants declaration in each CSS files for de CSS-modules
 * Responsive on mobile is a bit broken
 * Could create an utils function to filter and search
+* Should also sort by year on the dates
 * Could use portals for buttons menus
 * Could add some animation on Emotions interactions and list item appearance

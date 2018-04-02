@@ -19,7 +19,6 @@
 :local(.backgroundShape) {
   background: var(--blue-gradient);
   border-radius: 3.75rem var(--corner-radius) var(--corner-radius) var(--corner-radius);
-  height: 15rem;
   margin-bottom: var(--spacing-double);
   padding: var(--spacing-double);
 }

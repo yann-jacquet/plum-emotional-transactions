@@ -33,7 +33,7 @@ class FilterButton extends Component {
     return (
       <ClickOutside onClickOutside={() => this.setState({ isOpen: false })}>
         <button
-          className={[styles.btn, styles.btnFilter, isOpen ? styles.btnFilterActive : null, className].join(' ')}
+          className={[styles.btnFilter, isOpen ? styles.btnFilterActive : null, className].join(' ')}
           type="button"
           onClick={() => this.setState({ isOpen: !isOpen })}
         >

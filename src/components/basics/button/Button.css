@@ -34,9 +34,13 @@
   --active-shadow: active-shadow;
 }
 
-/* Base style for btn */
+:local(.btnLabel) {
+  padding: 0 var(--spacing-big) 0 var(--spacing-big);
+}
 
-:local(.btn) {
+/* Filter button style */
+
+:local(.btnFilter) {
   border: none;
   outline: none;
   border-radius: var(--button-radius);
@@ -48,22 +52,18 @@
   cursor: pointer;
   padding: var(--spacing-small) 0 var(--spacing-small) 0;
   overflow: hidden;
-}
-
-:local(.btnLabel) {
-  padding: 0 var(--spacing-big) 0 var(--spacing-big);
-}
-
-:local(.btn):hover {
-  transition: background-color var(--base-transition);
-  background-color: var(--plum-cyan);
-}
-  
-/* Filter button style */
-
-:local(.btnFilter) {
-  transition: max-height var(--base-transition);
   box-shadow: var(--hover-shadow);
+  min-height: 0rem;
+  max-height: 5rem;
+  transition:
+    border-radius var(--base-transition),
+    min-height var(--base-transition),
+    max-height var(--base-transition),
+    background-color var(--base-transition);
+}
+
+:local(.btnFilter):hover {
+  background-color: var(--plum-cyan);
 }
 
 :local(.btnLabel) > i {
@@ -77,9 +77,10 @@
 }
 
 :local(.btnFilter.btnFilterActive) {
-  animation: btnFilterAnimation 0.3s ease-in-out forwards;
+  min-height: 14.50rem;
   max-height: 14.50rem;
-  box-shadow: var(--active-shadow);
+  border-radius: var(--corner-radius);
+  background-color: var(--plum-skyblue);
 }
 
 :local(.list) {
@@ -102,18 +103,6 @@
 
 :local(.listItem):active {
   background: rgba(255, 255, 255, 0.6);
-}
-
-@keyframes btnFilterAnimation {
-    from {
-      border-radius: var(--button-radius);
-      min-height: 0rem;
-    }
-    to {
-      background: linear-gradient(var(--plum-cyan), var(--plum-skyblue));
-      border-radius: var(--corner-radius);
-      max-height: 14.50rem;
-    }
 }
 
 /* Search button style */
