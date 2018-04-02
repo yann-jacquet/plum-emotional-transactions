@@ -15,7 +15,9 @@ class FilterButton extends Component {
   }
 
   render() {
-    const { label, options, onItemClick } = this.props
+    const {
+      label, options, onItemClick, className,
+    } = this.props
     const { isOpen } = this.state
 
     const optionsList = (
@@ -31,7 +33,7 @@ class FilterButton extends Component {
     return (
       <ClickOutside onClickOutside={() => this.setState({ isOpen: false })}>
         <button
-          className={[styles.btn, styles.btnFilter, isOpen ? styles.btnFilterActive : null].join(' ')}
+          className={[styles.btn, styles.btnFilter, isOpen ? styles.btnFilterActive : null, className].join(' ')}
           type="button"
           onClick={() => this.setState({ isOpen: !isOpen })}
         >
@@ -52,6 +54,11 @@ FilterButton.propTypes = {
     label: PropTypes.string.isRequired,
   }).isRequired).isRequired,
   onItemClick: PropTypes.func.isRequired,
+  className: PropTypes.string,
+}
+
+FilterButton.defaultProps = {
+  className: '',
 }
 
 export default FilterButton

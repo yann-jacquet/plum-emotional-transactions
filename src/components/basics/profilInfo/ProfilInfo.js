@@ -5,9 +5,9 @@ import Avatar from '../avatar/Avatar'
 
 import styles from './ProfilInfo.css'
 
-const ProfilInfo = ({ picLink, user }) => (
+const ProfilInfo = ({ user }) => (
   <div className={styles.profilInfo}>
-    <Avatar picLink={picLink} />
+    <Avatar picLink={user.picUrl} />
     <span className={styles.information}>
       <h1>{ `${user.firstname} ${user.lastname}` }</h1>
       <p className="italic">{ user.clientId }</p>
@@ -16,7 +16,6 @@ const ProfilInfo = ({ picLink, user }) => (
 )
 
 ProfilInfo.propTypes = {
-  picLink: PropTypes.string.isRequired,
   user: PropTypes.object.isRequired,
 }
 

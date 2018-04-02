@@ -12,6 +12,8 @@
   base-transition: base-transition;
   text-light: text-light;
   text-bold: text-bold;
+  hover-shadow: hover-shadow;
+  active-shadow: active-shadow;
 }
 
 :root {
@@ -28,6 +30,8 @@
   --base-transition: base-transition;
   --text-light: text-light;
   --text-bold: text-bold;
+  --hover-shadow: hover-shadow;
+  --active-shadow: active-shadow;
 }
 
 /* Base style for btn */
@@ -59,6 +63,7 @@
 
 :local(.btnFilter) {
   transition: max-height var(--base-transition);
+  box-shadow: var(--hover-shadow);
 }
 
 :local(.btnLabel) > i {
@@ -73,7 +78,8 @@
 
 :local(.btnFilter.btnFilterActive) {
   animation: btnFilterAnimation 0.3s ease-in-out forwards;
-  max-height: 5rem;
+  max-height: 12.75rem;
+  box-shadow: var(--active-shadow);
 }
 
 :local(.list) {
@@ -106,7 +112,7 @@
     to {
       background: linear-gradient(var(--plum-cyan), var(--plum-skyblue));
       border-radius: var(--corner-radius);
-      max-height: 10rem;
+      max-height: 12.75rem;
     }
 }
 

@@ -1,0 +1,40 @@
+:import('../../../constants.css') {
+  blue-gradient: blue-gradient;
+  button-radius: button-radius;
+  corner-radius: corner-radius;
+  spacing-double: spacing-double;
+  white: white;
+  text-bold: text-bold;
+}
+
+:root {
+  --blue-gradient: blue-gradient;
+  --button-radius: button-radius;
+  --corner-radius: corner-radius;
+  --spacing-double: spacing-double;
+  --white: white;
+  --text-bold: text-bold;
+}
+
+:local(.backgroundShape) {
+  background: var(--blue-gradient);
+  border-radius: 3.75rem var(--corner-radius) var(--corner-radius) var(--corner-radius);
+  height: 15rem;
+  margin-bottom: var(--spacing-double);
+  padding: var(--spacing-double);
+  position: relative;
+}
+
+:local(.balance) {
+  text-align: right;
+  color: var(--white);
+  font-weight: var(--text-bold);
+  font-size: 3rem;
+}
+
+:local(.filter) {
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}

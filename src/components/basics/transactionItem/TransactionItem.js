@@ -5,7 +5,7 @@ import EmotionSelector from '../button/EmotionSelector'
 
 import styles from './TransactionItem.css'
 
-const TransactionItem = ({ transaction, className }) => (
+const TransactionItem = ({ transaction, className, onEmotionChange }) => (
   <li className={['row', styles.transaction, className].join(' ')}>
     <div className="col-sm-3">
       <div className="box">
@@ -23,13 +23,14 @@ const TransactionItem = ({ transaction, className }) => (
       </div>
     </div>
     <div className={styles.transactionEmotion}>
-      <EmotionSelector emotion={transaction.emotion} onChange={(emo) => console.log('changed for this', emo)} className={styles.emoji} />
+      <EmotionSelector emotion={transaction.emotion} onChange={(emo) => onEmotionChange(transaction.id, emo)} className={styles.emoji} />
     </div>
   </li>
 )
 
 TransactionItem.propTypes = {
   transaction: PropTypes.object.isRequired,
+  onEmotionChange: PropTypes.func.isRequired,
   className: PropTypes.string,
 }
 
